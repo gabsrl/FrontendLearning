@@ -1,0 +1,234 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Poppins', sans-serif;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+}
+
+body {
+    background-color: hsl(0, 100%, 74%);
+    background-image: url('./images/bg-intro-desktop.png');
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.mainSection {
+    display: flex;
+    flex-direction: column;
+    margin-right: 70px;
+}
+.mainSection h1 {
+    width: 270px;
+    font-size: 3.2rem;
+    color: #ffff;
+    font-weight: bold;
+}
+.mainSection p {
+    width: 350px;
+    font-size: 1.4rem;
+    color: #f2f2f2;
+}
+
+.subscribeSection {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+}
+
+.subscribeSection div.tryItContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 45px;
+    border-radius: 10px;    
+    box-shadow: 0 6px rgba(0,0,0, 0.10);
+    background-color: hsl(248, 32%, 49%);
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.subscribeSection div.tryItContainer p {
+    font-size: 1.2rem;
+    color: #f6f6f6;
+}
+.subscribeSection div.tryItContainer p span {
+    font-weight: bold;
+}
+
+
+.subscribeSection form {
+    height: 450px;  
+    border-radius: 10px;
+    box-shadow: 0 10px rgba(0,0,0, 0.20);
+    background-color: #ffff;
+ }
+
+.subscribeSection form {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+}
+
+.subscribeSection form label {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+    margin-bottom: 15px;
+
+}
+
+.subscribeSection form label div {
+    display: none;
+    width: 100%;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.subscribeSection form label img {
+    position: absolute;
+    left: 90%;
+    bottom: 150%;
+}
+
+.subscribeSection form label div span {
+    
+    font-size: 1.0rem;
+    font-weight: 600;
+    color: hsl(0, 100%, 74%);
+}
+
+.showError {
+    display: initial !important;
+}
+
+.error {
+    color: hsl(0, 100%, 74%);
+}
+
+.subscribeSection form label input {
+    width: 100%;
+
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: hsl(249, 10%, 26%);
+    height: 40px;
+    padding: 10px;
+    border-color: hsl(0, 0%, 80%);
+    border-radius: 4px;
+    border-width: 2px;
+    border-style: solid;            
+}
+
+.subscribeSection form label input:focus {
+    outline: none;
+    border-width: 2px;
+    border-color: hsl(249, 10%, 26%);
+    border-style: solid;
+}
+
+
+.subscribeSection form button {
+    background-color: hsl(154, 59%, 51%);
+    height: 40px;
+    border-style: none;
+    border-radius: 5px;
+    box-shadow: 0px 1px 2px rgba(0,0,0,0.20);
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #fff;
+}
+
+.subscribeSection form button:hover {
+    background-color: hsla(154, 59%, 51%, 0.829);
+}
+
+.subscribeSection form button:focus {
+    outline: none !important;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #737373;
+}
+
+#termsServiceText {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.0rem;
+    font-weight: 500;
+    color: hsl(246, 25%, 77%);
+}
+
+#termsServiceText span {
+    color: hsl(0, 100%, 74%);
+}
+
+
+@media (max-width: 425px ) {
+    html {
+        font-size: 55%;
+    }
+
+    body{
+        background-image: url('./images/bg-intro-mobile.png');
+    }
+    .container {
+        flex-direction: column;
+        width: 100%;
+        height: unset;
+        margin-top: 50px;
+    }
+    .mainSection{
+        align-items: center;
+        justify-content: center;
+        margin-right: 0px;
+    }
+
+    .mainSection h1 {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .mainSection p {
+        text-align: center;
+        width: 65%;
+        margin-bottom: 50px;
+    }
+
+    .subscribeSection {
+        width: 100%;
+        align-items: center;
+    }
+    .subscribeSection div.tryItContainer {
+        width: 80%;
+        height: 60px
+    }
+    .subscribeSection div.tryItContainer p {
+        width: 50%;
+    }
+    .subscribeSection form {
+        width: 80%;
+        max-height: 450px;
+        margin-bottom: 40px;
+    }
+
+    .subscribeSection form label div img {
+        height: 16px;
+        width: 16px;
+    }
+}
